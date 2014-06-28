@@ -1,0 +1,60 @@
+# Overview
+-
+  name: 'Overview'
+  uriPattern: ''
+  defaults:
+    '@package': 'Sandstorm.Inventory'
+    '@controller': 'Overview'
+    '@action': 'index'
+
+# Inventory Item
+
+
+
+# NEW
+-
+  name: 'New Inventroy Item'
+  uriPattern: 'new'
+  defaults:
+    '@package': 'Sandstorm.Inventory'
+    '@controller': 'InventoryItem'
+    '@action': 'new'
+  appendExceedingArguments: true
+
+# EDIT, UPDATE, DELETE, SHOW
+
+-
+  name: 'Show Inventory Item'
+  uriPattern: '{item}'
+  defaults:
+    '@package': 'Sandstorm.Inventory'
+    '@controller': 'InventoryItem'
+    '@action': 'show'
+  routeParts:
+    item:
+      objectType: 'Sandstorm\Inventory\Domain\Model\InventoryItem'
+      uriPattern: '{serialNumber}'
+
+
+-
+  name: 'Edit/Create/... Inventory Item'
+  uriPattern: '{item}/{@action}'
+  defaults:
+    '@package': 'Sandstorm.Inventory'
+    '@controller': 'InventoryItem'
+  routeParts:
+    item:
+      objectType: 'Sandstorm\Inventory\Domain\Model\InventoryItem'
+      uriPattern: '{serialNumber}'
+
+
+
+
+-
+  name: 'Check QR Code'
+  # TODO: parameter renamed from qrCode to serialNumber ?!
+  uriPattern: 'qr/{qrCode}' # TODO: removing the qr/ will lead to a routingloop, because of the routing cache.
+  defaults:
+    '@package': 'Sandstorm.Inventory'
+    '@controller': 'InventoryItem'
+    '@action': 'checkQRCode'

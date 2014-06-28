@@ -1,0 +1,12 @@
+<f:layout name="Default"/>
+
+<f:section name="Content">
+	<h1>Edit {item.serialNumber}</h1>
+	<f:form name="item" action="update" object="{item}">
+		<f:form.textfield property="title" placeholder="Title"/>
+		<f:form.textarea property="description" placeholder="Description"/>
+		<f:form.textfield property="curator" placeholder="Curator"/>
+
+		<f:form.submit class="button" value="Update"/>
+	</f:form>
+</f:section>

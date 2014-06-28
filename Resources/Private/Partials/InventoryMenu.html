@@ -1,0 +1,27 @@
+{namespace smi=Sandstorm\Inventory\ViewHelpers}
+<ul class="block-grid mobile-three-up three-up">
+	<!-- TODO: remove the inline styles or find a better working markup to make the whole li-element a link -->
+	<!-- NOTE: wrapping the li-element by a link destroys the layout -->
+	<li class="large button secondary">
+		<smi:scanInventoryBarcode>
+			<div style="width: 100%; height: 100%">
+				<i class="fa fa-qrcode"></i>
+			</div>
+		</smi:scanInventoryBarcode>
+	</li>
+	<li class="large button secondary">
+		<f:link.action controller="Overview" action="index">
+			<div style="width: 100%; height: 100%">
+				<i class="fa fa-th-list"></i>
+			</div>
+		</f:link.action>
+	</li>
+	<li class="large button secondary">
+		<f:link.action controller="InventoryItem" action="new">
+			<div style="width: 100%; height: 100%">
+				<i class="fa fa-plus"></i>
+			</div>
+		</f:link.action>
+	</li>
+
+</ul>

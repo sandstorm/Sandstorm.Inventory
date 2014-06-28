@@ -1,0 +1,42 @@
+<f:layout name="Default"/>
+
+<f:section name="Content">
+	<h1>Overview</h1>
+
+	<table class="tablesaw tablesaw-stack" data-mode="stack">
+		<thead>
+		<tr>
+			<th>Serial</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Curator</th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+			<f:for each="{items}" as="item">
+				<tr>
+					<td>
+						<f:link.action action="show" controller="InventoryItem" arguments="{item: item}">{item.serialNumber}</f:link.action>
+					</td>
+					<td>
+						<f:link.action action="show" controller="InventoryItem" arguments="{item: item}">{item.title}</f:link.action>
+					</td>
+					<td>
+						{item.description}
+					</td>
+					<td>
+						{item.curator}
+					</td>
+					<td>
+						<f:link.action action="edit" controller="InventoryItem" arguments="{item: item}" class="button">edit</f:link.action>
+					</td>
+				</tr>
+			</f:for>
+		</tbody>
+	</table>
+
+	<link rel="stylesheet" href="{f:uri.resource(package: 'Sandstorm.Inventory', path: 'tablesaw/tablesaw.stackonly.css')}"/>
+    <script type="application/javascript" src="{f:uri.resource(package: 'Sandstorm.Inventory', path: 'jquery-2.1.1.min.js')}"></script>
+    <script type="application/javascript" src="{f:uri.resource(package: 'Sandstorm.Inventory', path: 'tablesaw/tablesaw.stackonly.js')}"></script>
+</f:section>

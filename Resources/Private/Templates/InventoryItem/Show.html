@@ -1,0 +1,13 @@
+<f:layout name="Default"/>
+
+<f:section name="Content">
+	<h1>{item.serialNumber} - {item.title} </h1>
+
+	<f:if condition="{item.description}">
+		<p>{item.description}</p>
+	</f:if>
+
+	<p><em>{item.curator}</em></p>
+
+	<f:link.action action="edit" arguments="{item: item}" class="button">edit</f:link.action>
+</f:section>

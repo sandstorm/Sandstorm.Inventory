@@ -1,0 +1,7 @@
+/**
+* the main menu of the inventory
+*/
+/* line 4, ../sass/_menu.scss */
+.inventory-menu li a i {
+  padding-top: 15px;
+}

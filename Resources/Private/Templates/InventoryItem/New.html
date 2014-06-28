@@ -1,0 +1,13 @@
+<f:layout name="Default"/>
+
+<f:section name="Content">
+	<H1>Create new Inventory Item</H1>
+	<f:form name="item" action="create">
+		<f:form.textfield property="serialNumber" value="{serialNumber}" placeholder="Serial Number"/>
+		<f:form.textfield property="title" value="{title}" placeholder="Title"/>
+		<f:form.textarea property="description" placeholder="Description"/>
+		<f:form.textfield property="curator" placeholder="Curator"/>
+
+		<f:form.submit value="Create"/>
+	</f:form>
+</f:section>
