@@ -1,8 +1,8 @@
 <?php
 namespace Sandstorm\Inventory\Controller;
 
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Mvc\Controller\ActionController;
+use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Mvc\Controller\ActionController;
 
 use Sandstorm\Inventory\Domain\Model\InventoryItem as InventoryItem;
 
@@ -21,7 +21,7 @@ class InventoryItemController extends ActionController {
 
 	/**
 	 * @Flow\Inject
-	 * @var \TYPO3\Flow\Persistence\PersistenceManagerInterface
+	 * @var \Neos\Flow\Persistence\PersistenceManagerInterface
 	 */
 	protected $persistenceManager;
 
