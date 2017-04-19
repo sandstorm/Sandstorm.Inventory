@@ -2,7 +2,7 @@
 namespace Sandstorm\Inventory\ViewHelpers;
 
 use Neos\Flow\Annotations as Flow;
-use TYPO3\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
+use Neos\FluidAdaptor\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
  * creates a link to ScanController::scanAction reading its parameter from a barcode
