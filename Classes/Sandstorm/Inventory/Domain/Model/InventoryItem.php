@@ -25,8 +25,8 @@ class InventoryItem {
 	 *
 	 * @var string
 	 * @Flow\Validate(type="Text")
-	 * @Flow\Validate(type="StringLength", options={ "minimum"=6, "maximum"=6 })
-	 * @ORM\Column(length=6)
+	 * @Flow\Validate(type="StringLength", options={ "minimum"=6, "maximum"=10 })
+	 * @ORM\Column(length=10)
 	 */
 	protected $serialNumber = '';
 
